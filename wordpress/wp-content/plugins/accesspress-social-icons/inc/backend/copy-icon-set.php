@@ -5,7 +5,7 @@ $si_id = $_GET['si_id'];
 $table_name = $table_name = $wpdb->prefix . "aps_social_icons";
 $icon_sets = $wpdb->get_results("SELECT * FROM $table_name where si_id = $si_id");
 $icon_set = $icon_sets[0];
-$this->print_array($icon_set);
+//$this->print_array($icon_set);
 /**
  * 
  * stdClass Object

@@ -226,7 +226,7 @@ $icon_extra = unserialize($icon_set->icon_extra);
                                         //$this->print_array($icon_details);
                                         $icon_counter = 0;
                                         $si_id = $_GET['si_id'];
-                                        
+                                        if(!empty($icon_details)):
                                         foreach ($icon_details as $title => $icon_detail) {
                                             $icon_counter++;
                                             $icon_main_class = 'icon-' . $si_id . '-' . $icon_counter;
@@ -239,9 +239,11 @@ $icon_extra = unserialize($icon_set->icon_extra);
                                                         <span class="aps-arrow-down aps-arrow button button-secondary" aria-label="expand icons">
                                                             <i class="dashicons dashicons-arrow-down"></i>
                                                         </span>
+                                                        <?php if ($icon_extra['icon_set_type'] == 1) { ?>
                                                         <span class="aps-delete-icon button button-secondary" aria-label="delete icons">
                                                             <i class="dashicons dashicons-trash"></i>
                                                         </span>
+                                                        <?php }?>
                                                     </span>
                                                 </div>
                                                 <div class="aps-icon-body" style="display: none;">
@@ -354,6 +356,7 @@ $icon_extra = unserialize($icon_set->icon_extra);
                                             </li>
                                             <?php
                                         }
+                                        endif;
                                         ?>
                                     </ul>
                                 </div>

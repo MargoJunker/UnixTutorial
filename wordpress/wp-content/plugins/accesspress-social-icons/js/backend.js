@@ -169,7 +169,7 @@
                 error_flag = 1;
                 $('input[name="set_name"]').closest('.aps-field-wrapper').find('.aps-error').html(aps_script_variable.set_name_required_message);
             }
-            if ($('#aps-icon-counter').val() <= 0)
+            if ($('.aps-sortable-icons').length < 1)
             {
                 error_flag = 1;
                 $(this).parent().find('.aps-main-error').html(aps_script_variable.min_icon_required_message)

@@ -210,4 +210,9 @@ function wpb_get_post_views($postID){
     }
     return $count.' Views';
 }
+add_action('wp_logout','go_home');
+function go_home(){
+  wp_redirect( home_url() );
+  exit();
+}
 ?>

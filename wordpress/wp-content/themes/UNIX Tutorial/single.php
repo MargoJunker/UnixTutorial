@@ -1,9 +1,5 @@
-<?php get_header(); ?>
-           
+<?php get_header(); ?>      
             <div class="row">
-                <div class="jumbotron hidden-xs">
-                    <img class="" src="http://promotions.newegg.com/tablet/13-3226/970x90.jpg">
-                </div>
                 <div class="col-md-3">
                     <div class="row toc">
                         <div class="scrollspy" id="myScrollspy">
@@ -22,9 +18,16 @@
 
                     get_template_part( 'content', 'single' );
 
-                    the_post_navigation(); ?>
-
-                    <?php endwhile; // end of the loop. ?>
+                    the_post_navigation(); 
+                    
+                endwhile; // end of the loop. ?>
+                <?php 
+                if ( is_user_logged_in() ) {
+                    printf ('<button id="orderButton" class="btn btn-lg btn-danger" href="#" onclick="order();">Order Droplet</button>');
+                }else{
+                    
+                }
+                ?>
                 </div>
                 <!-- /Content -->
             </div>

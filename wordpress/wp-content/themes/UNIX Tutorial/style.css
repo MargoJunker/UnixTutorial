@@ -2,7 +2,7 @@
 Theme Name: UNIX Tutorial
 Theme URI: 178.662.65.175
 Author: Margo Junker
-Author URI: http://www.Junker.ee
+Author URI: http://www.margojunkertest.eu
 Description: Simple and nice looking theme for tutorial pages.
 Version: 2.0.0
 Text Domain: UNIX Tutorial
@@ -11,8 +11,8 @@ Tags: Tutorial, Learning, Help, Student, UNIX
 
 @import url('css/bootstrap.min.css');
 @import url('css/bootstrap-responsive.css');
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:700,400);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -162,7 +162,7 @@ kbd,
 pre,
 samp {
 	font-family: monospace, monospace;
-	font-size: 1em;
+	font-size: 1em !important;
 }
 
 button,
@@ -529,7 +529,7 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
+	float: right;
 	position: relative;
 }
 
@@ -596,9 +596,6 @@ a:active {
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
-	}
-	.main-navigation ul {
-		display: block;
 	}
 }
 
@@ -886,6 +883,7 @@ object {
 /*--------------------------------------------------------------
 ## Own CSS
 --------------------------------------------------------------*/
+
 * {
     padding: 0;
     margin: 0;
@@ -901,6 +899,10 @@ body {
 .wrapper {
     max-width: 970px;
     margin: 0 auto;
+}
+#post-10>header>h1.entry-title,
+#post-8>header>h1.entry-title {
+       display:none;
 }
 
 /*--------------------------------------------------------------
@@ -945,6 +947,9 @@ header {
 .site-nav ul {
     margin: 0;
     padding: 0;
+}
+ul.nav {
+    display: block;
 }
 .site-header {
     border: 1px solid lightgray;
@@ -1001,7 +1006,7 @@ header {
     background: white;
     cursor: pointer;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    background: url("http://www.upload.ee/image/4691478/loop.png");
+    background: url("https://www.upload.ee/image/4691478/loop.png");
 }
 button, input[type="button"], input[type="reset"], input[type="submit"] {
     box-shadow: none;
@@ -1181,3 +1186,60 @@ ul.nav-tabs li a:hover{
     font-size: 1.5em;
 }
 
+li.dropdown {
+    list-style: none;
+    margin-top: 17px;
+    margin-right: 14px;
+}
+button.dropdown-toggle {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+p.login-submit>input.button-primary:active,
+p.login-submit>input.button-primary:focus,
+p.login-submit>input.button-primary:hover, 
+p.login-submit>input.button-primary,
+.btn-default:active, 
+.btn-default:focus, 
+.btn-default:hover, 
+.open>.dropdown-toggle.btn-default {
+    background-color: white !important;
+}
+ul.logon {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+p.login-username>input, 
+p.login-password>input {
+    font-size: 1.4rem;
+}
+p.contact-submit>input,
+p.login-submit>input.button-primary {
+    font-size: 1.3rem;
+}
+.dropdown-menu {
+    right: 0 !important;
+}
+ul.dropdown-menu>li {
+    width: 100%;
+}
+ul.dropdown-menu>li>a {
+    margin: 0;
+    line-height: 1;
+    font-size: 1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.dropdown-menu>li>a:focus, 
+.dropdown-menu>li>a:hover {
+    background: none;
+}
+.nav-links { display: none; }
+
+#orderButton {
+    margin: 0 auto;
+    display: block;
+}
+.tutorial-content>pre {
+    margin: 0 auto;
+}
